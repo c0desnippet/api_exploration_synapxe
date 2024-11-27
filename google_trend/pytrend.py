@@ -1,5 +1,5 @@
-import pandas as pd
 import time
+import datetime
 from pytrends.request import TrendReq
 
 # Initialize pytrends
@@ -28,7 +28,8 @@ if not df.empty:
     df_daily.index = df_daily.index.strftime('%Y-%m-%d')
     
     # Output the daily data to a readable JSON file
-    json_file_path = 'google_trends.json'
+    file_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    json_file_path = f"google_trends_{file_timestamp}.json"
     df_daily.to_json(json_file_path, orient='index', indent=4)
     
     print(f"Data successfully saved to {json_file_path}")

@@ -7,8 +7,6 @@ Efforts have been made to locate instruments in relatively unobstructed areas to
 
 The wind speed observations refer to the mean wind speed measured over a 10-minute period and are available at 1-minute resolution.
 """
-
-
 import http.client
 import json
 import datetime
@@ -18,8 +16,6 @@ import urllib.parse
 # API base URL and endpoint
 base_url = "api-open.data.gov.sg"
 endpoint = "/v2/real-time/api/wind-speed"
-# conn.request("GET", "/v2/real-time/api/wind-speed")
-
 
 # Query parameters
 query_params = {
@@ -50,7 +46,7 @@ json_data['fetchTimestamp'] = fetch_timestamp
 
 # Format the timestamp for use in the filename
 file_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-filename = f"wind_direction_{file_timestamp}.json"
+filename = f"wind_speed_{file_timestamp}.json"
 
 # Get the script's directory
 script_dir = os.path.dirname(__file__)

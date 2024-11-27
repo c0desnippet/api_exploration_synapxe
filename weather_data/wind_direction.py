@@ -7,8 +7,6 @@ While every effort has been made to site the instruments in relatively unobstruc
 
 The wind observations on this page refers to the mean wind over a period of 10 minutes. The data is available at 1-minute resolution.
 """
-
-
 import http.client
 import json
 import datetime
@@ -49,7 +47,7 @@ json_data['fetchTimestamp'] = fetch_timestamp
 
 # Format the timestamp for use in the filename
 file_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-filename = f"air_temperature_{file_timestamp}.json"
+filename = f"wind_direction_{file_timestamp}.json"
 
 # Get the script's directory
 script_dir = os.path.dirname(__file__)

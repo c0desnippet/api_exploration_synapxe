@@ -5,8 +5,6 @@ These data are collected from automated weather instruments, and is automaticall
 
 While every effort has been made to site the instruments in relatively unobstructed areas to provide the best possible indication of the general weather conditions, there are times when this is not possible. The readings from the instruments could thus be influenced by local conditions.
 """
-
-
 import http.client
 import json
 import datetime

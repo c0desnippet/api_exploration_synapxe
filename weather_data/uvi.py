@@ -2,8 +2,6 @@
 Updated every hour between 7 AM and 7 PM everyday
 The UV index value is averaged over the preceding hour
 """
-
-
 import http.client
 import json
 import datetime
